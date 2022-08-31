@@ -4,7 +4,7 @@ require __DIR__ . '/config.php';
 require __DIR__ . '/src/error_handler.php';
 require __DIR__ . '/src/resolve-route.php';
 require __DIR__ . '/src/render.php';
-require __DIR__ . '/src/db.php';
+require __DIR__ . '/src/conn.php';
 
 if (resolve('/admin/?(.*)')){
     require __DIR__ . '/admin/routes.php';

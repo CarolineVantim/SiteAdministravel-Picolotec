@@ -9,6 +9,8 @@ function resolve($route){
     if (preg_match($route, $path, $params)){
         return $params;
     }
+
+    // var_dump($params);
     
     return false;
 }
