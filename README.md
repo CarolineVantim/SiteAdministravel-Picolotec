@@ -1,1 +1,1 @@
-Projeto PICOLOTEC
+Projeto administrativo
