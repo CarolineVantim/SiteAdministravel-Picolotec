@@ -6,6 +6,7 @@
     <title>Painel administrativo</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/resources/trix/trix.css">
+    <!-- <link rel="stylesheet" href="/resources/pnotify/pnotify.custom.min.css"> -->
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body class="d-flex flex-column">
@@ -43,5 +44,9 @@
     <script src="/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/resources/trix/trix.js"></script>
+    <!-- <script src="/resources/pnotify/pnotify.custom.min.js"></script> -->
+    <script>
+        <?php flash(); ?>
+    </script>
   </body>
 </html>
