@@ -1,5 +1,31 @@
-<h3>Administração de cadastros</h3>
+<h3>Administração de páginas</h3>
 
-//Criação de páginas
+<form action="" method="POST">
+    <br>
+    <div class="form-group">
+        <label for="pagesTitle">Título</label>
+        <input type="text" name="title" id="pagesTitle" class="form-control" placeholder="Título" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="pagesUrl">URL</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">/</span>
+            </div>
+            <input name="url" id="pagesUrl" type="text" class="form-control" placeholder="URL amigável, deixe em branco para informar a página inicial...">
+        </div>  
+    </div>
+    <br>
+    <div class="form-group">
+        <input id="pagesBody" type="hidden" name="body">
+        <trix-editor input="pagesBody"></trix-editor>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Salvar</button>
 
-<a href="/admin">Ir para home</a>
+    <hr>
+
+</form>
+
+<a href="/admin/pages" class="btn btn-secondary">Voltar</a>
