@@ -1,5 +1,24 @@
-<h3>Administração de cadastros</h3>
+<h3 class="mb-5">Administração de cadastros</h3>
 
-//Listagem
+<table class="table table-hover">
+    
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Título</th>
+                <th></th>
+            </tr>
 
-<a href="/admin">Ir para home</a>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="/admin/pages/1">Página inicial</a></td>
+                <td class="text-right">
+                    <a href="/admin/pages/1" class="btn btn-primary btn-sm">Ver</a>
+                </td>
+            </tr>
+        </tbody>
+</table>
+
+<a class="btn btn-secondary" href="/admin/pages/create">Novo</a>
