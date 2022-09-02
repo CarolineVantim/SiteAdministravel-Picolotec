@@ -44,12 +44,30 @@ $pages_create = function () use ($conn){
     return $stmt->execute();
 };
 
-$pages_edit = function ($id){
+$pages_edit = function ($id) use ($conn){
     // atualiza uma página
+    $data = pages_get_data('/admin/pages' .$id . '/edit');
+
+    $sql = 'UPDATE pages SET title=?, body=?, url=?, updated = NOW() WHERE id=?';
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('sssi', $data['title'], $data['url'], $data['body'], $id);
+    //cadastra uma página
     flash('Registro alterado com sucesso!', 'success');
+
+    return $stmt->execute();
+
+    
 };
 
-$pages_delete = function ($id){
+$pages_delete = function ($id) use ($conn){
     //remove uma página
+    $sql = 'DELETE FROM pages WHERE id=?';
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
+    //cadastra uma página
     flash('Registro removido com sucesso!', 'success');
+
+    return $stmt->execute();
 };
