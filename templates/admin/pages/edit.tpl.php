@@ -4,7 +4,7 @@
     <br>
     <div class="form-group">
         <label for="pagesTitle">Título</label>
-        <input type="text" name="title" id="pagesTitle" class="form-control" placeholder="Título" required value="Página Inicial">
+        <input type="text" name="title" id="pagesTitle" class="form-control" placeholder="Título" required value="<?php echo $data['page']['title']; ?>">
     </div>
     <br>
     <div class="form-group">
