@@ -22,12 +22,11 @@ if (resolve('/admin/pages')){
         $pages_edit($params[1]);
         return header('Location: /admin/pages/' . $params[1]);
     }
+    $page = $pages_one($params[1]);
     render('admin/pages/edit', 'admin', ['page' => $page]);
 
 }elseif ($params = resolve('/admin/pages/(\d+)/delete')){
-    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $pages_delete($params[1]);
-    }
+    $pages_delete($params[1]);
     header('Location: /admin/pages');
 
 }
