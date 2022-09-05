@@ -8,6 +8,14 @@ function setInternalServerError($errno, $errstr, $errfile, $errline){
         exit;
     }
 
+    if (is_object($errno)){
+        $err = $errno;
+        $errno = $err->getCode();
+        $errstr = $err->getCode();
+        $errfile = $err->getCode();
+        $errline = $err->getCode();
+    }
+
     echo '<span style="font-weigth: bold; color: red">';
     switch ($errno){
         case E_USER_ERROR:

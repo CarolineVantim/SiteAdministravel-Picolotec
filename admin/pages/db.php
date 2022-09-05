@@ -5,13 +5,13 @@ function pages_get_data ($redirectOnError) {
     $url = filter_input(INPUT_POST, 'url');
     $body = filter_input(INPUT_POST, 'body');
 
-    if (is_null($title) or is_null($url)) {
-        flash('Informe os campos de título e url', 'error');
+    if (!$title) {
+        flash('Informe o campo título', 'error');
         header('Location: ' . $redirectOnError);
         die();
     }
 
-    return compact('title', 'body', 'url');
+    return compact('title', 'url' , 'body');
 }
 
 $pages_all = function () use ($conn){
@@ -34,7 +34,7 @@ $pages_one = function ($id) use ($conn){
 $pages_create = function () use ($conn){
     $data = pages_get_data('/admin/pages/create');
 
-    $sql = 'INSERT INTO pages (title, body, url, created, updated) VALUES (?, ?, ?, NOW(), NOW())';
+    $sql = 'INSERT INTO pages (title, url, body, created, updated) VALUES (?, ?, ?, NOW(), NOW())';
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('sss', $data['title'], $data['url'], $data['body']);
@@ -48,7 +48,7 @@ $pages_edit = function ($id) use ($conn){
     // atualiza uma página
     $data = pages_get_data('/admin/pages' .$id . '/edit');
 
-    $sql = 'UPDATE pages SET title=?, body=?, url=?, updated = NOW() WHERE id=?';
+    $sql = 'UPDATE pages SET title=?, url=?, body=?, updated = NOW() WHERE id=?';
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('sssi', $data['title'], $data['url'], $data['body'], $id);
