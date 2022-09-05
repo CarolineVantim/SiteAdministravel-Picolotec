@@ -46,7 +46,25 @@
     <script src="/resources/trix/trix.js"></script>
     <!-- <script src="/resources/pnotify/pnotify.custom.min.js"></script> -->
     <script>
+
+        document.addEventListener('trix-attachment-add', function () {
+            const attachment = event.attachment;
+            if (attachment.file) {
+                
+            }
+        });
         <?php flash(); ?>
+
+        const confirmEl = document.querySelector('.confirm');
+
+        if (confirmEl){
+            confirmEl.addEventListener('click', function(e)){
+                e.preventDefault();
+                if(confirm('Tem certeza que quer fazer isso?')){
+                    window.location = e.target.getAttribute('href');
+                }
+            });
+        }
     </script>
   </body>
 </html>
