@@ -12,11 +12,14 @@
   </head>
   <body class="d-flex flex-column">
     <div id="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a href="/admin" class="navbar-brand">Administrativo</a>
-            <spn class="navbar-text">
-                Painel administrativo!
-            </spn>
+        <nav class="navbar navbar-dark bg-dark">
+            <span>
+                <a href="/admin" class="navbar-brand">BLOG</a>
+                <span class="navbar-text">
+                    Painel administrativo!
+                </span>
+            </span>
+            <a href="/admin/auth/logout" class="btn btn-danger"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
         </nav>
     </div>
     <div id="main">
