@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Picolotec</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/site.css">
 </head>
 <body>
     <header id="header">
-        <h1>Bem vindo</h1>
+        <h1>Bem vindo a SON</h1>
     </header>
 
     <ul id="nav">
-        <?php foreach ($data['pages'] as $item): ?>
-            <li><a href="/<?php echo $item['url'] ?>"><?php echo $item['title'] ?></a></li>
-        <?php endforeach; ?>
+        <li><a href="/">Home</a></li>
         <li><a href="/contato">Contato</a></li>
     </ul>
 
     <main id="content">
-    <?php include $content ?>
+        <h1>Olá mundo</h1>
     </main>
 
-    <p id="footer"><small><?php echo date('Y'); ?> - todos os direitos reservados</small></p>
+    <p id="footer"><small>2018 - todos os direitos reservados</small></p>
 </body>
 </html>
