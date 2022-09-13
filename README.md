@@ -2,7 +2,7 @@ Projeto blog
 
 Para que você consiga abrir o projeto recomendo as seguintes configurações:
 
--Instalar o php;
+-Instalar o php;<br>
 -Habilitar no php.ini a extensão do Mysqli;
 -Utilizar o server do próprio PHP;
 
