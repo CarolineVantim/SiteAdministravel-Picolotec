@@ -11,14 +11,14 @@
         <label for="pagesUrl">URL</label>
         <div class="input-group">
             <div class="input-group-prepend">
-                <span class="input-group-text">/</span>
+                <span class="input-group-text">/<?php echo $data['page']['url']; ?></span>
             </div>
             <input name="url" id="pagesUrl" type="text" class="form-control" placeholder="URL amigável, deixe em branco para informar a página inicial..." value="<?php echo $data['page']['url']; ?>">
         </div>  
     </div>
     <br>
     <div class="form-group">
-        <input id="pagesBody" type="hidden" name="body" value="<?php echo $data['page']['body']; ?>">
+        <input id="pagesBody" type="hidden" name="body" value="<?php echo  htmlentities($data['page']['body']); ?>">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
     <br>
